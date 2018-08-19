@@ -1,6 +1,8 @@
 // Importing the React class and ReactDOM
 import React from 'React'
 import ReactDOM from 'react-dom'
+import 'hack';
+import SimpleStorage from 'react-simple-storage';
 
 import { Header } from './Components/Header';
 import { Textbox } from './Components/Textbox';
@@ -75,6 +77,7 @@ deleteEntry(index, day){
 render(){
   return(
     <div>
+      <SimpleStorage parent={this} />
       <Header nam={this.state.username} />
       <Textbox updateEntry={this.updateEntry} />
       <hr />
